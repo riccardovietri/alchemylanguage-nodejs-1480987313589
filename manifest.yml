@@ -1,6 +1,6 @@
 ---
 declared-services:
-  alchemy:
+  alchemy-service:
     label: alchemy_api
     plan: standard
 applications:
@@ -9,5 +9,7 @@ applications:
   path: .
   instances: 1
   memory: 512MB
+  services:
+  - alchemy-service
   env:
     NPM_CONFIG_PRODUCTION: false
