@@ -16,15 +16,21 @@ Give it a try! Click the button below to fork into IBM DevOps Services and deplo
 
 2. Download and install the [Cloud-foundry CLI][cloud_foundry] tool
 
-3. Edit the `manifest.yml` file and change the `<application-name>` to something unique.
-  ```none
-applications:
-- services:
-  - alchemy-service
-  name: <application-name>
-  command: npm start
-  path: .
-  memory: 256M
+3. Edit the `manifest.yml` file and change the `- name: alchemy-language-demo` line to to something unique.
+  ```yml
+  ---
+  declared-services:
+    alchemy-service:
+      label: alchemy_api
+      plan: standard
+  applications:
+  - name: <application-name>
+    command: npm start
+    memory: 512MB
+    services:
+    - alchemy-service
+    env:
+      NPM_CONFIG_PRODUCTION: false
   ```
   The name you use will determinate your application url initially, e.g. `<application-name>.mybluemix.net`.
 
