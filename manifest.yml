@@ -2,7 +2,7 @@
 declared-services:
   alchemy-service:
     label: alchemy_api
-    plan: standard
+    plan: free
 applications:
 - name: alchemy-language-demo
   command: npm start
