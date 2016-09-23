@@ -8,6 +8,8 @@ Give it a try! Click the button below to fork into IBM DevOps Services and deplo
 
 [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/watson-developer-cloud/alchemylanguage-nodejs)
 
+*Note:* The automatic Deploy to Bluemix process may fail if you already have a free AlchemyAPI intance on your account. In that case, please follow the manual steps below.
+
 ## Getting Started
 
 1. Create a Bluemix Account
@@ -49,6 +51,14 @@ Give it a try! Click the button below to fork into IBM DevOps Services and deplo
   ```sh
   $ cf create-service alchemy_api standard alchemy-service
   ```
+  
+  Note: on Bluemix Trial accounts, you'll need to use the `free` plan instead:
+  
+  ```sh
+  $ cf create-service alchemy_api free alchemy-service
+  ```
+  
+  Bluemix accounts are limited to a single free alchemy_api service instance; if you already have one, then edit your `manifest.yml` to point to it.
 
 6. Push it live!
 
