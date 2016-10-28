@@ -72,7 +72,7 @@ See the full [Getting Started][getting_started] documentation for more details, 
 
   The application uses [Node.js](http://nodejs.org/) and [npm](https://www.npmjs.com/).
 
-1. Copy the `apikey` from your `alchemy-service` service in Bluemix to a  `.env` file in the root directory.
+1. Copy the `apikey` from your `alchemy-service` service in Bluemix to a  `.env` file in the root directory (`ALCHEMY_LANGUAGE_API_KEY=<apikey>`)
 2. Install [Node.js](http://nodejs.org/)
 3. Go to the project folder in a terminal and run:
     ```
